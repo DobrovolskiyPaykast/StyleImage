@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RecordFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/clMainRecord">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clEmployeeRecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Spinner
+                android:id="@+id/sEmployeeRecord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:popupBackground="@drawable/headbottom"
+                android:backgroundTint="#ffffff"
+                android:background="#00FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bDateRecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:drawableRight="@drawable/search"
+            android:text="Выбрать дату"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:background="@drawable/button"
+            android:textAllCaps="false"
+            android:gravity="left|center_vertical"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clEmployeeRecord" />
+
+        <ImageView
+            android:id="@+id/ibClearRecord"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/clear_date"
+            android:padding="15dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/bDateRecord"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bDateRecord"
+            app:layout_constraintTop_toTopOf="@+id/bDateRecord"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCheckedRecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bDateRecord"
+            tools:ignore="MissingConstraints">
+
+            <Spinner
+                android:id="@+id/sCheckedRecord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:popupBackground="@drawable/headbottom"
+                android:backgroundTint="#ffffff"
+                android:background="#00FFFFFF"
+                android:dropDownSelector="@android:drawable/arrow_down_float"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/svRecord"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clCheckedRecord">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tbRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent">
+
+                <TableRow
+                    android:id="@+id/trRecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6px"
+                    android:background="@drawable/tablerowhead">
+
+                    <TextView
+                        android:id="@+id/tvTbTimeRecord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="6"
+                        android:gravity="center"
+                        android:padding="4px"
+                        android:text="Время"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvTbClientRecord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_weight="12"
+                        android:padding="4px"
+                        android:gravity="center"
+                        android:text="Данные клиента"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvTbPriceNameRecord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="2"
+                        android:layout_weight="12"
+                        android:gravity="center"
+                        android:maxWidth="30dp"
+                        android:text="Вид услуги"
+                        android:padding="4px"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="15sp" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvTableNotRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_margin="4px"
+                android:layout_weight="9"
+                android:maxWidth="30dp"
+                android:padding="4px"
+                android:textColor="#6b5b89"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="15sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

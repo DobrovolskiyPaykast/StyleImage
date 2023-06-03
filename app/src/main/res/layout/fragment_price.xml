@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PriceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTypePrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/spinner"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="20dp">
+
+            <Spinner
+                android:id="@+id/sTypePrice"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:popupBackground="@drawable/headbottom"
+                android:background="#00FFFFFF"
+                android:animationCache="true"
+                android:backgroundTint="#ffffff"
+                android:fontFamily="@font/montserrat_regular"
+                android:dropDownSelector="@android:drawable/arrow_down_float"
+                android:shape="rectangle"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clTypePrice">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/tbPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:background="@drawable/tablerowhead"
+                        android:layout_marginBottom="6px">
+
+                        <TextView
+                            android:id="@+id/tvTbPriceNamePrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_column="0"
+                            android:layout_weight="8"
+                            android:gravity="center"
+                            android:scrollHorizontally="false"
+                            android:text="Услуга"
+                            android:textColor="#ffffff"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvTbPricePrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_column="1"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:maxWidth="10dp"
+                            android:scrollHorizontally="false"
+                            android:text="Цена"
+                            android:textColor="#ffffff"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textSize="15sp" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

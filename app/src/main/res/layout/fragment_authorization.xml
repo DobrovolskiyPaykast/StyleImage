@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AuthorizationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etPhoneAuto"
+
+            android:textSize="15sp"
+            android:paddingStart="15dp"
+            android:background="@drawable/edittext"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:hint="@string/phone_hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="50dp"
+            android:autofillHints=""
+            android:digits="1234567890"
+            android:ems="10"
+            android:inputType="phone"
+            android:paddingEnd="15dp"
+            android:drawableEnd="@drawable/edittxt"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etPasswordAuto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/pass_hint"
+            android:paddingEnd="15dp"
+            android:drawableEnd="@drawable/edittxt"
+            android:fontFamily="@font/montserrat_regular"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPhoneAuto"
+            android:textSize="15sp"
+            android:paddingStart="15dp"
+            android:background="@drawable/edittext"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/cbAuto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#9c78c3"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:shadowColor="#9c78c3"
+            android:text="Запомнить меня"
+            android:textColor="#9c78c3"
+            android:textColorHighlight="#9c78c3"
+            android:textColorHint="#9c78c3"
+            android:textColorLink="#9c78c3"
+            app:layout_constraintEnd_toEndOf="@+id/bAuto"
+            app:layout_constraintStart_toStartOf="@+id/bAuto"
+            app:layout_constraintTop_toBottomOf="@+id/bAuto" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bAuto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button"
+            android:clickable="false"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+
+            android:text="Войти"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/etPasswordAuto"
+            app:layout_constraintStart_toStartOf="@+id/etPasswordAuto"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordAuto" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

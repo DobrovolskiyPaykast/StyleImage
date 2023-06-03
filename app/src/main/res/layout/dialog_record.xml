@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etNewPriceDialogRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="15dp"
+                android:drawableRight="@drawable/edittxt"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:background="@drawable/edittext"
+                android:hint="Новая цена"
+                android:inputType="number"
+                android:paddingStart="15dp"
+                android:minHeight="48dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textColorHint="#FFFFFF" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bNewDateDialogRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button"
+                android:drawableRight="@drawable/search"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="left|center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="Выбрать дату"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bNewPriceDialogRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button"
+                android:drawableRight="@drawable/search"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="left|center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="Выбрать время"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bAddPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="ОК"
+                android:textColor="#ffffff"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvheadCustom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:layout_marginBottom="6px"
+                android:scrollHorizontally="false"
+                android:text="Последнее посещение:"
+                android:textColor="#6b5b89"
+                android:textSize="15sp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+                <TextView
+                    android:id="@+id/tvheadClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="ФИО"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+                <TextView
+                    android:id="@+id/tvheadPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="Телефон"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+                <TextView
+                    android:id="@+id/tvheadDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="Дата"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+
+                <TextView
+                    android:id="@+id/tvheadViewPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="Вид услуги"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyViewPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+
+                <TextView
+                    android:id="@+id/tvheadEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="Сотрудник"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+
+                <TextView
+                    android:id="@+id/tvheadPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="Цена"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bDeleteRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/montserrat_regular"
+                android:onClick="clickOk"
+                android:text="Клиент не пришел"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

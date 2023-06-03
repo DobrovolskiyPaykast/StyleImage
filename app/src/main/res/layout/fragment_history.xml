@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HistoryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etDataHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:paddingEnd="15dp"
+            android:drawableEnd="@drawable/edittxt"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/fioorphne_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="15sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bOkHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/montserrat_regular"
+            android:onClick="clickOk"
+            android:text="ОК"
+            android:textSize="17sp"
+            android:textColor="#ffffff"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/etDataHistory"
+            app:layout_constraintStart_toStartOf="@+id/etDataHistory"
+            app:layout_constraintTop_toBottomOf="@+id/etDataHistory" />
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginTop="10dp"
+        android:text="Клиенты:"
+        android:textColor="#6b5b89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bOkHistory" />
+
+        <TextView
+            android:id="@+id/tvClientHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text=""
+            android:textColor="#6b5b89"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvHistory"
+            app:layout_constraintTop_toTopOf="@+id/tvHistory" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTbHistory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvClientHistory">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:id="@+id/tbHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvClientHistory"
+                        tools:ignore="UselessParent">
+
+                        <TableRow
+                            android:id="@+id/trHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6px"
+                            android:background="@drawable/tablerowhead">
+
+                            <TextView
+                                android:id="@+id/tvTbDateHistory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_column="0"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:maxWidth="50dp"
+                                android:text="Дата"
+                                android:textColor="#FFfFFF"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tvTbPriceNameHistory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_column="1"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:text="Услуга"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tvTbPriceHistory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_column="2"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:maxWidth="10dp"
+                                android:text="Цена"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/tvTableNotHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4px"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:maxWidth="30dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:padding="4px"
+                        android:text=""
+                        android:textColor="#6b5b89"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clViewPriceHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/spinner"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Spinner
+                android:id="@+id/sViewPriceHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:animationCache="true"
+                android:popupBackground="@drawable/headbottom"
+                android:backgroundTint="#ffffff"
+                android:background="#00ffffff"
+                android:dropDownSelector="@android:drawable/arrow_down_float"
+                android:fontFamily="@font/montserrat_regular"
+                android:shape="rectangle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bDateHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:drawableRight="@drawable/search"
+            android:background="@drawable/button"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="left|center_vertical"
+            android:onClick="clickHistory"
+            android:paddingStart="15dp"
+            android:paddingEnd="15sp"
+            android:text="Выбрать дату"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clViewPriceHistory" />
+
+        <ImageView
+            android:id="@+id/ibClearHistory"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/clear_date"
+            android:padding="15dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/bDateHistory"
+            app:layout_constraintStart_toEndOf="@+id/bDateHistory"
+            app:layout_constraintTop_toTopOf="@+id/bDateHistory"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

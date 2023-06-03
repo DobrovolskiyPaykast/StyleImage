@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainAdd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etClientAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/edittext"
+            android:drawableEnd="@drawable/edittxt"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/fio_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--android:hint="@string/edittext_hint"-->
+        <EditText
+            android:id="@+id/etPhoneAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/edittext"
+            android:drawableRight="@drawable/edittxt"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/phone_hint"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etClientAdd" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clViewPriceAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPhoneAdd">
+
+            <Spinner
+                android:id="@+id/sViewPriceAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:animationCache="true"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:dropDownSelector="@drawable/spinnericon"
+                android:fontFamily="@font/montserrat_regular"
+                android:popupBackground="@drawable/headbottom"
+                android:shape="rectangle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bErrorAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/clEmployeeAdd"
+            app:layout_constraintBottom_toBottomOf="@+id/clEmployeeAdd"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clEmployeeAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clViewPriceAdd">
+
+            <Spinner
+                android:id="@+id/sEmployeeAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:animationCache="true"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:dropDownSelector="@drawable/spinnericon"
+                android:fontFamily="@font/montserrat_regular"
+                android:popupBackground="@drawable/headbottom"
+                android:shape="rectangle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bDateAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/button"
+            android:drawableRight="@drawable/search"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="left|center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Выбрать дату"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clEmployeeAdd" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bTimeAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/button"
+            android:drawableRight="@drawable/search"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="left|center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Выбрать время"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bDateAdd" />
+
+        <EditText
+            android:id="@+id/etPriceAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:paddingEnd="15dp"
+            android:drawableRight="@drawable/edittxt"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:background="@drawable/edittext"
+            android:hint="@string/Price_hint"
+            android:inputType="number"
+            android:paddingStart="15dp"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bTimeAdd" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bOkAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="90dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Добавить"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPriceAdd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "990766075591",
+    "project_id": "styleandimage-e2067",
+    "storage_bucket": "styleandimage-e2067.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990766075591:android:d05c5bda99a9e9c05038e2",
+        "android_client_info": {
+          "package_name": "com.example.styleandimage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990766075591-g2qfqsf9jf983s9sqvv652tskh5g8pp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg8l6e7OIZ0SeJz4eNjxBAn5V92LqIwoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990766075591-g2qfqsf9jf983s9sqvv652tskh5g8pp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegistrFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etPhoneRegistr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:autofillHints=""
+            android:background="@drawable/edittext"
+            android:digits="1234567890"
+            android:ems="10"
+            android:paddingEnd="15dp"
+            android:drawableEnd="@drawable/edittxt"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/phone_hint"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etPasswordRegistr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:paddingEnd="15dp"
+            android:drawableEnd="@drawable/edittxt"
+            android:autofillHints=""
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/pass_hint"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#b980d1"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#9c78c3"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPhoneRegistr" />
+
+        <EditText
+            android:id="@+id/etNameRegistr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:paddingEnd="15dp"
+            android:drawableEnd="@drawable/edittxt"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/fio_hint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordRegistr" />
+
+        <EditText
+            android:id="@+id/etMailRegist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            android:background="@drawable/edittext"
+            android:paddingEnd="15dp"
+            android:drawableEnd="@drawable/edittxt"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/mail_hint"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNameRegistr" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bRegistr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/montserrat_regular"
+            android:onClick="clickRegistration"
+            android:text="Создать"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/etMailRegist"
+            app:layout_constraintStart_toStartOf="@+id/etMailRegist"
+            app:layout_constraintTop_toBottomOf="@+id/etMailRegist" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

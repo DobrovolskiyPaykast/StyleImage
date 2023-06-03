@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Style&amp;Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fio_hint"><font fontFamily="@font/montserrat_regular" size="15">ФИО</font></string>
+    <string name="phone_hint"><font fontFamily="@font/montserrat_regular" size="15">Телефон</font></string>
+    <string name="fioorphne_hint"><font fontFamily="@font/montserrat_regular" size="15">ФИО или телефон</font></string>
+    <string name="pass_hint"><font fontFamily="@font/montserrat_regular" size="15">Пароль</font></string>
+    <string name="mail_hint"><font fontFamily="@font/montserrat_regular" size="15">E-mail</font></string>
+    <string name="Time_hint"><font fontFamily="@font/montserrat_regular" size="15">Время</font></string>
+    <string name="Price_hint"><font fontFamily="@font/montserrat_regular" size="15">Цена</font></string>
+    <string name="your_string_here">Кликните чтобы повторно отправить код<u>underline</u>.</string>
+</resources>

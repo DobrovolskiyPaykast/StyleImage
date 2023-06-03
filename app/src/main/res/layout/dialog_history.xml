@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/svDialogHistoty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/contentDialogHistoty"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etAddPriceDialogHistoty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/edittext"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Введите стоимость"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:drawableRight="@drawable/edittxt"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bDialogHistoty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/montserrat_regular"
+                android:onClick="clickOk"
+                android:text="ОК"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvheadCustomDialogHistoty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:layout_marginBottom="6px"
+                android:scrollHorizontally="false"
+                android:text="Последнее посещение:"
+                android:textColor="#6b5b89"
+                android:textSize="17sp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+                <TextView
+                    android:id="@+id/tvheadClientDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="ФИО"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyClientDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+                <TextView
+                    android:id="@+id/tvheadDateDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="Дата"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyDateDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+
+                <TextView
+                    android:id="@+id/tvheadViewPriceDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="Вид услуги"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyViewPriceDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+
+                <TextView
+                    android:id="@+id/tvheadEmployeeDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="Сотрудник"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyEmployeeDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px">
+
+                <TextView
+                    android:id="@+id/tvheadPriceDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="Цена"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvbodyPriceDialogHistoty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:maxWidth="10dp"
+                    android:scrollHorizontally="false"
+                    android:text="-"
+                    android:textColor="#6b5b89"
+                    android:textSize="15sp" />
+            </TableRow>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

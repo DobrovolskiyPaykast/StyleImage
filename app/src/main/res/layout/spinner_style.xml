@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/textView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/montserrat_regular"
+    android:textSize="15sp"
+    android:paddingVertical="15dp"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:textColor="#FFFFFF"
+    android:background="@drawable/spinneritem"
+    app:drawableRightCompat="@drawable/spinnericon"/>
+
